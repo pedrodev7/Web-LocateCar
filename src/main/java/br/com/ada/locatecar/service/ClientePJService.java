@@ -22,8 +22,8 @@ public class ClientePJService {
         return this.clientePJRepository.findAll();
     }
 
-    public void removerCliente(ClientePJ cliente){
-        this.clientePJRepository.delete(cliente);
+    public void removerCliente(Long id){
+        this.clientePJRepository.deleteById(id);
     }
 
 }
