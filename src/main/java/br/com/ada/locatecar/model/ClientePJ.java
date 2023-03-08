@@ -6,20 +6,24 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @Entity
 @Table(name = "clientepj_tb")
+@SuperBuilder
+@NoArgsConstructor
 public class ClientePJ extends Cliente{
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
     @Column(unique = true)
     private String cnpj;
-    private String razaoSocial;
+
+    
 }
