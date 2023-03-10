@@ -1,6 +1,7 @@
 package br.com.ada.locatecar.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,6 +25,10 @@ public class ClientePJService {
 
     public void removerCliente(Long id){
         this.clientePJRepository.deleteById(id);
+    }   
+
+    public Optional<ClientePJ> buscarClientePorId(Long id){
+        return this.clientePJRepository.findById(id);
     }
 
 }
