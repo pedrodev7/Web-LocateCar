@@ -15,6 +15,8 @@ Criar uma aplicação que utilize quaisquer uma das entidades do projeto Locador
 #### Requisitos Não Funcionais
 * Utilizar JPA + H2 ou Postgres (Docker)
 
+### Dicas Úteis e Informações
+Para uma melhor facilidade na geração de dados ao realizar um cadastrado do projeto, recomendo utilizar o site [4devs](https://www.4devs.com.br/gerador_de_empresas) na aba Gerador de Empresas.
 
 
 ### Linguagens e Ferramentas Utilizadas
