@@ -1,11 +1,14 @@
 package br.com.ada.locatecar.model;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,7 +28,8 @@ public class ClientePJ extends Cliente{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true)
+    @NotEmpty(message = "Obrigatório o preenchimento do CNPJ")
+    @Size(min = 18, max = 18, message = "CNPJ Invalido. Utilize um formato 00.000.000/0000-00")
     private String cnpj;
-
     
 }
