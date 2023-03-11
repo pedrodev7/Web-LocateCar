@@ -50,7 +50,7 @@
         </li>
       </ul>
 
-      <form class="container" th:object="${clientepj}" method="POST">
+      <form class="container" th:object="${clientepj}" method="GET">
         <div class="form-row">
           <div class="form-group col-md-8">
             <label for="inputEmail4">Nome</label>
@@ -95,7 +95,7 @@
             <input type="text" class="form-control" id="inputCep" th:field="*{cep}" disabled>
           </div>
         </div>
-        <button type="submit" class="btn btn-dark container">Voltar</button>
+        <a class="btn btn-dark container" href="/clientepj">Voltar</a>
     
     
       </form>

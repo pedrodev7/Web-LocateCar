@@ -72,7 +72,7 @@
             <td>
               <a class="btn btn-primary btn-sm" th:href="@{/clientepj/{id}/edit(id=${cliente.id})}">Editar</a>
               <a class="btn btn-danger btn-sm" th:href="@{/clientepj/{id}/delete(id=${cliente.id})}">Deletar</a>
-              <a class="btn btn-secondary btn-sm" href="#">Visualizar</a>
+              <a class="btn btn-secondary btn-sm" th:href="@{/clientepj/{id}/view(id=${cliente.id})}">Visualizar</a>
           </td>
           </tr>
         </tbody>

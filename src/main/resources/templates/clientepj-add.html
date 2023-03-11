@@ -51,7 +51,7 @@
     </li>
   </ul>
 
-  <form class="container" th:object="${clientepj}" method="POST">
+  <form class="container" th:object="${clientepj}" method="POST" novalidate>
     <div class="form-row">
       <div class="form-group col-md-8">
         <label for="inputEmail4">Nome</label>
@@ -60,6 +60,10 @@
       <div class="form-group col-md-4">
         <label for="inputPassword4">CNPJ</label>
         <input type="text" class="form-control" id="inputCnpj" placeholder="CNPJ" th:field="*{cnpj}">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-danger" th:if="${erroCnpj}" th:text="${erroCnpj}"></li>
+          <li class="list-group-item list-group-item-danger" th:each="erro : ${#fields.errors('cnpj')}" th:text="${erro}"></li>
+        </ul>
       </div>
     </div>
     <div class="form-row">
